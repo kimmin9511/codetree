@@ -1,4 +1,6 @@
 a = input()
 b = input()
-print(b)
-print(a)
+
+a, b = b, a
+
+print(f"{a}\n{b}")
