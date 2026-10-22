@@ -8,7 +8,7 @@ for i in range(n*2) :
         print()
 
     else :
-        for j in range(n-i//2) :
+        for j in range(n-(i-1)//2) :
             print("*", end=" ")
 
         print()
