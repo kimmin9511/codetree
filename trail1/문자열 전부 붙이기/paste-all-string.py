@@ -1,9 +1,10 @@
 n = int(input())
 
-tot = ""
+arr = [
+    input()
+    for i in range(n)
+]
 
-for i in range(n) :
-    str = input()
-    tot+=str
+str = "".join(arr)
 
-print(tot)
+print(str)
