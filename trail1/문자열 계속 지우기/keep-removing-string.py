@@ -1,28 +1,30 @@
 A = input()
 B = input()
 
-a = len(A)
-b = len(B)
+len_a, len_b = len(A), len(B) 
 
-while True:
+list_a, list_b = list(A), list(B)
+
+while True :
     idx = -1
-    for i in range(a - b + 1):
-        is_same = True
+    for i in range(len_a - len_b + 1) :
+        if list_a[i] == list_b[0] :
+            boolean = True
+            for j in range(len_b) :
+                if list_a[i+j] != list_b[j] :
+                    boolean = False
+                    break
 
-        for j in range(b):
-            if A[i + j] != B[j]:
-                is_same = False
+            if boolean :
+                idx = i
                 break
-        
-        if is_same:
-            idx = i
-            break
 
-    if idx == -1:
+    if idx == -1 :
         break
 
-    A = A[:idx] + A[idx + b:]
+    list_a = list_a[:idx] + list_a[idx+len_b:]
+    len_a = len(list_a)
 
-    a = len(A)
 
-print(A)
+
+print(''.join(list_a))
