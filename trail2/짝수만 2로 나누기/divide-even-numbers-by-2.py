@@ -2,8 +2,8 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 
-def modify(_list) :
-    for i in range(len(_list)) :
+def modify(num, _list) :
+    for i in range(num) :
         if _list[i] % 2 == 0 :
             _list[i] = int(_list[i] / 2)
 
@@ -11,5 +11,5 @@ def modify(_list) :
         print(j, end=" ")
 
     
-modify(arr)
+modify(n, arr)
 
