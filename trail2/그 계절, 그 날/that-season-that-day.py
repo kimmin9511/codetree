@@ -1,6 +1,6 @@
 Y, M, D = map(int, input().split())
 
-
+# 윤년인지 아닌지를 판단하는 함수
 def yoon(a) :
     if a % 4 == 0 :
         if a % 100 == 0 :
@@ -11,6 +11,7 @@ def yoon(a) :
     return False
 
 
+# 윤년이라면 2월은 29일까지, 윤년이 아니라면 2월은 28일까지
 def season(a, b, c) :
     if yoon(a) :
         if 1<=b<=12 :
@@ -45,6 +46,7 @@ def season(a, b, c) :
         return False
 
 
+# True or False값에 따라 False면 -1 출력, True면 해당 월이 봄 여름 가을 겨울 중에 어느 계절인지 확인하고 프린트.
 if season(Y, M, D) :
     if 3<=M<=5 :
         print("Spring")
