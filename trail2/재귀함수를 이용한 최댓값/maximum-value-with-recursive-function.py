@@ -2,19 +2,10 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 
-def find_max(arr, n):
-   
-    if n == 1:
+def f(k) :
+    if k == 0 :
         return arr[0]
 
-    
-    max_value = find_max(arr, n - 1)
+    return max(f(k-1), arr[k])
 
-    
-    if arr[n - 1] > max_value:
-        return arr[n - 1]
-    else:
-        return max_value
-
-
-print(find_max(arr, n))
+print(f(n-1))
