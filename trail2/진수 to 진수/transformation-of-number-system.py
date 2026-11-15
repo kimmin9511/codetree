@@ -17,13 +17,9 @@ while True :
         print(n)
         break
         
-    if b == 2 :
-        if num < 2 :
-            solve.append(num)
-            break
-
     else :
-        if num < 1 :
+        if num < b :
+            solve.append(num)
             break
 
     solve.append(num%b)
