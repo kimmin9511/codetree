@@ -15,8 +15,8 @@ _list = [
 ]
 
 for i in range(n) :
-    for start in range(x1[i], x2[i]) :
-        for end in range(y1[i], y2[i]) :
+    for start in range(x1[i] + offset, x2[i] + offset) :
+        for end in range(y1[i] + offset, y2[i] + offset) :
             _list[start][end] += 1
 
 cnt = 0
